@@ -43,7 +43,7 @@ export class CommentForm extends Component {
                             <div className="col-12">
                                 <LocalForm onSubmit={(values) => this.handleSubmit(values)} >
                                     <Row className="form-group">
-                                        <Label htmlFor="rating">Rating</Label>
+                                        <Label htmlFor="rating" md={12}>Rating</Label>
                                         <Col md={12}>
                                             <Control.select model=".rating" name="rating" className="form-control" >
                                                 <option>1</option>
@@ -56,7 +56,7 @@ export class CommentForm extends Component {
                                     </Row>
 
                                     <Row className="form-group">
-                                        <Label htmlFor="author">Your Name</Label>
+                                        <Label htmlFor="author" md={12}>Your Name</Label>
                                         <Col md={12}>
                                             <Control.text model=".author" id="author" name="author" placeholder="Your Name" className="form-control" validators={{ required, minLength:  minLength(3), maxLength: maxLength(15)}} />
                                             <Errors className="text-danger" model=".author" show="touched" messages={{ required: 'Required', minLength: 'Must be greater than 3 characters', maxLength: 'Must be 15 charaters or less'}} />
@@ -64,7 +64,7 @@ export class CommentForm extends Component {
                                     </Row>
 
                                     <Row className="form-group">
-                                        <Label htmlFor="feedback" >Comment</Label>
+                                        <Label htmlFor="feedback" md={12}>Comment</Label>
                                         <Col md={12}>
                                             <Control.textarea model=".comment" id="comment" name="comment" rows="6" className="form-control" validators={{ required }} />
                                             <Errors className="text-danger" model=".message" show="touched" messages={{ required: 'Required'}} />
